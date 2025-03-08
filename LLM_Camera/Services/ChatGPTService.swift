@@ -15,7 +15,7 @@ class ChatGPTService {
         }
         
         // Encode image to base64
-        guard let imageData = image.jpegData(compressionQuality: 0.7) else {
+        guard let imageData = image.jpegData(compressionQuality: 0.8) else {
             throw NSError(domain: "ChatGPTService", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to convert image to data"])
         }
         
@@ -41,7 +41,7 @@ class ChatGPTService {
                     ]
                 ]
             ],
-            "max_tokens": 300
+            "max_tokens": 2000
         ]
         
         // Create URL request
