@@ -113,6 +113,7 @@ struct PromptSettingView: View {
                             UserDefaults.standard.set(apiKey, forKey: AppConstants.UserDefaults.savedAPIKey)
                             // Save prompt
                             prompt = editingPrompt
+                            UserDefaults.standard.set(editingPrompt, forKey: AppConstants.UserDefaults.savedPromptKey)
                             UserDefaults.standard.synchronize()
                             
                             presentationMode.wrappedValue.dismiss()
